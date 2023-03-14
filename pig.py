@@ -30,7 +30,7 @@ def game(numPlayers):
             while current_player.check_turn():
                 player_action = input("type 'r' to roll, type 'h' to hold:")
                 if player_action.lower() not in ('r', 'h'):
-                    print("Not an appropriate choice.")
+                    print("Not an appropriate input.")
                 else:
                     player_action = player_action.lower()
                     if player_action == 'r':
