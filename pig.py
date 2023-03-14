@@ -1,11 +1,12 @@
 import argparse
 from player import Player
-from dice import roll_dice
+from dice import Dice
 
 
 def game(numPlayers):
     players = []
     game_over = False
+    die1 = Dice()
 
     # set up players name
     for i in range(1, numPlayers + 1):
@@ -31,7 +32,8 @@ def game(numPlayers):
                 else:
                     player_action = player_action.lower()
                     if player_action == 'r':
-                        current_player.roll(roll_dice())
+                        die1.roll()
+                        current_player.roll(die1.die_result())
                     else:
                         current_player.hold()
                     if current_player.check_winning_status():
