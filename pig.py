@@ -1,5 +1,4 @@
 import argparse
-from dice import roll_dice
 from player import Player
 import random
 random.seed(0)
