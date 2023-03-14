@@ -33,7 +33,7 @@ class Player:
         else:
             self.turn_score += current_roll
             potential_score = self.total_score + self.turn_score
-            print("You rolled {}, your current turn score is {}, your potential score is {}".format(current_roll, potential_score))
+            print("You rolled {}, your current turn score is {}, your potential score is {}".format(current_roll, self.turn_score, potential_score))
             if potential_score >= 100:
                 self.hold()
                 print("{} you won with {} points".format(self.name, self.total_score))

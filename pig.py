@@ -1,10 +1,7 @@
 import argparse
 from player import Player
-import random
-random.seed(0)
+from dice import roll_dice
 
-def roll_dice():
-    return random.randint(1,6)
 
 def game(numPlayers):
     players = []
